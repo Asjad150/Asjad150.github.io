@@ -161,14 +161,14 @@ export const content = {
      featured: true makes the card wider                                      */
   projects: [
     {
-      title: "Text-to-Video Generator",
-      category: "AI",
+      title: "Hajji Assist — Pilgrim Companion Platform",
+      category: "Full-Stack",
       featured: true,
-      year: "2024",
-      text: "Final-year thesis: a generative model that takes a text prompt, as you would give ChatGPT, and produces a video that matches its context. Built on UNET and CLIP, with GPU VRAM profiling and steganography experiments.",
-      tags: ["PyTorch", "CUDA", "cuDNN", "UNET", "CLIP"],
+      year: "2026",
+      text: "A two-platform system for a Hajj travel operator. The React Native (Expo) app for iOS & Android gives each pilgrim their schedule, travel, hotel and transfer details, prayer times and guides, plus live chat with staff and one-tap emergency alerts. A Next.js 14 admin portal doubles as the mobile API, with role-based staff access, bulk Excel import, reports and exports. Runs on PostgreSQL (Prisma) with Docker Compose and Nginx on a VPS.",
+      tags: ["React Native", "Expo", "Next.js 14", "PostgreSQL", "Prisma", "Docker Compose", "Nginx", "JWT"],
       image: "",
-      links: [],
+      links: [], // private client project; add App Store / Play Store links here once public
     },
     {
       title: "AI Attendance & Vision Suite",
@@ -177,6 +177,16 @@ export const content = {
       year: "2025",
       text: "Face-recognition office attendance, plus human, gender and parking-space detection services, containerised and running on production Azure VMs.",
       tags: ["OpenCV", "Face Recognition", "Docker", "Azure"],
+      image: "",
+      links: [],
+    },
+    {
+      title: "Text-to-Video Generator",
+      category: "AI",
+      featured: true,
+      year: "2024",
+      text: "Final-year thesis: a generative model that takes a text prompt, as you would give ChatGPT, and produces a video that matches its context. Built on UNET and CLIP, with GPU VRAM profiling and steganography experiments.",
+      tags: ["PyTorch", "CUDA", "cuDNN", "UNET", "CLIP"],
       image: "",
       links: [],
     },
@@ -249,16 +259,6 @@ export const content = {
       tags: ["Web"],
       image: "",
       links: [{ label: "GitHub", url: "https://github.com/Asjad150/myvirtualclock.com" }],
-    },
-    {
-      title: "Pilgrim Assist",
-      category: "Web",
-      featured: false,
-      year: "2026",
-      text: "An assistant platform for pilgrims. Details coming soon.",
-      tags: ["In progress"],
-      image: "",
-      links: [{ label: "GitHub", url: "https://github.com/Asjad150/pilgrim-assist" }],
     },
   ],
 

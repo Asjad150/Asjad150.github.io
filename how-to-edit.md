@@ -43,7 +43,7 @@ Open `data/content.js`, find `projects: [`, and copy-paste this block **inside t
 - **Reorder:** cut and paste the blocks. The number on each card (01, 02…) updates itself.
 - **Colors of generated covers:** these are set per category in `assets/js/ui.js` → `COVER`. Unknown categories fall back to violet. To add a colour for a new category, add a line such as `Mobile: ["#0f1a33", "#1d2f5c", "#3ee6ff"],` (start colour, end colour, glow colour).
 
-> ✏️ **To-do for you:** the placeholders `Pilgrim Assist` and `My Virtual Clock` have short descriptions because those repos have no README. Please replace them with real details.
+> ✏️ **To-do for you:** `My Virtual Clock` has a short placeholder description because its repo has no README. Please replace it with real details.
 
 ---
 

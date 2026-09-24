@@ -38,6 +38,7 @@ const COVER = {
   DevOps: ["#0b1a3a", "#12275e", "#6aa8ff"],
   Web: ["#221034", "#3a1648", "#ffb547"],
   Automation: ["#12201a", "#173a2c", "#7dffa1"],
+  "Full-Stack": ["#2a1206", "#4a2410", "#ffb547"],
 };
 const coverFor = (cat) => COVER[cat] || ["#10163a", "#1e0f3a", "#8b5cf6"];
 

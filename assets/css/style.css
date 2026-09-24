@@ -281,7 +281,7 @@ body.ready .hero > .container > :nth-child(7) { transition-delay: 1s; }
 .filter { padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.03); font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); cursor: pointer; transition: all 0.25s; }
 .filter:hover { color: var(--text); border-color: var(--line-2); }
 .filter.active { color: #070812; background: var(--cyan); border-color: var(--cyan); box-shadow: 0 0 20px rgba(62, 230, 255, 0.4); }
-.projects__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.projects__grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-flow: dense; gap: 18px; }
 .project { padding: 0; display: flex; flex-direction: column; }
 .project.featured { grid-column: span 2; }
 .project.is-hidden { display: none; }
