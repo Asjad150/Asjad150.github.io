@@ -26,7 +26,7 @@ export const content = {
       "FastAPI & Django backends, AI vision services, IoT pipelines, and the cloud infrastructure that keeps them running — from the device to the dashboard.",
     location: "Islamabad / Rawalpindi, Pakistan",
     availability: "Open to remote & on-site opportunities",
-    photo: "assets/img/profile.png", // replace the file or change this path
+    photo: "assets/img/profile.jpg", // replace the file or change this path
     // Optional: public link to a CV/resume PDF. Leave "" to hide the button.
     resumeUrl: "",
   },

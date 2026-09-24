@@ -49,7 +49,7 @@ Open `data/content.js`, find `projects: [`, and copy-paste this block **inside t
 
 ## 2. Change the profile picture
 
-**Easiest:** replace the file `assets/img/profile.png` with your new photo, keeping the same name.
+**Easiest:** replace the file `assets/img/profile.jpg` with your new photo, keeping the same name.
 
 **Or** drop in any file and point to it:
 
