@@ -37,6 +37,7 @@ export const content = {
     whatsapp: "+923341541899", // digits with country code; "" to hide
     linkedin: "https://www.linkedin.com/in/asjad-iftikhar-ai1/",
     github: "https://github.com/Asjad150",
+    fiverr: "https://www.fiverr.com/asjadiftikhar75", // "" to hide
     website: "https://bio.link/asjadiftikhar",
   },
 

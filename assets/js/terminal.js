@@ -74,13 +74,14 @@ export function initTerminal(C, { onCommand } = {}) {
           `  email     ${link("mailto:" + K.email, K.email)}`,
           K.linkedin && `  linkedin  ${link(K.linkedin, "asjad-iftikhar-ai1")}`,
           K.github && `  github    ${link(K.github, K.github.replace(/^https?:\/\//, ""))}`,
+          K.fiverr && `  fiverr    ${link(K.fiverr, "hire me on Fiverr")}`,
           K.whatsapp && `  whatsapp  ${link("https://wa.me/" + K.whatsapp.replace(/\D/g, ""), "chat now")}`,
         ].filter(Boolean).join("\n"));
       },
     },
     hire: {
       d: "the fast track",
-      run: () => { print(`<span class="g">✔ Great choice.</span> Opening the contact section…\n<span class="m">Tip: the form pre-fills an email to ${esc(K.email)}</span>`); go("contact"); },
+      run: () => { print(`<span class="g">✔ Great choice.</span> Opening the contact section…\n<span class="m">Tip: the form pre-fills an email to ${esc(K.email)}</span>${K.fiverr ? `\n<span class="m">Prefer a marketplace?</span> ${link(K.fiverr, "Order on Fiverr")}` : ""}`); go("contact"); },
     },
     clear: { d: "clear the screen", run: () => (out.innerHTML = "") },
     sudo: { hidden: true, d: "", run: () => print(`<span class="p">Permission granted.</span> Deploying Asjad to your team… <span class="g">100%</span> ✔`) },
@@ -93,7 +94,7 @@ export function initTerminal(C, { onCommand } = {}) {
     const s = q.toLowerCase();
     const STOP = new Set("you your do does did can could have has the and with for are what which how about know use using work works make build any some that this there from into like want need does also".split(" "));
     const words = s.split(/[^a-z0-9.+#]+/).filter((w) => w.length > 1 && !STOP.has(w));
-    if (/contact|email|reach|hire|phone|whatsapp|call/.test(s)) return cmds.contact.run();
+    if (/contact|email|reach|hire|phone|whatsapp|call|fiverr|freelanc/.test(s)) return cmds.contact.run();
     if (/cert|microsoft|coursera|degree|educat|universit|nutech|study/.test(s)) return cmds.certs.run();
     if (/experience|worked|career|\bjobs?\b|compan|devomech|hypernym/.test(s)) return cmds.experience.run();
     if (/\bwho\b|yourself|introduce/.test(s)) return cmds.whoami.run();

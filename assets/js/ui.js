@@ -25,6 +25,7 @@ export const ICONS = {
   github: svg('<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>'),
   whatsapp: svg('<path d="M3.5 20.5l1.3-4.4A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c.2 2.9 3.6 6.3 6.5 6.5l1-1.6-2-1-1 .9c-1-.4-2.4-1.8-2.8-2.8l.9-1-1-2z"/>'),
   globe: svg('<circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.8 6 3.8 9.5s-1.2 6.7-3.8 9.5c-2.6-2.8-3.8-6-3.8-9.5S9.4 5.3 12 2.5z"/>'),
+  fiverr: svg('<circle cx="12" cy="12" r="9.5"/><path d="M14.5 7.5h-1.2a2 2 0 0 0-2 2v1H9.5M11.3 10.5V17M11.3 10.5h4V17M15.3 7.6v.01"/>'),
   arrow: svg('<path d="M7 17L17 7M8 7h9v9"/>'),
   pin: svg('<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>'),
 };
@@ -206,6 +207,7 @@ export function renderAll(C) {
   const socials = [
     K.linkedin && { icon: "linkedin", name: "LinkedIn", sub: K.linkedin.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""), url: K.linkedin },
     K.github && { icon: "github", name: "GitHub", sub: K.github.replace(/^https?:\/\/(www\.)?/, ""), url: K.github },
+    K.fiverr && { icon: "fiverr", name: "Fiverr", sub: "Hire me for a project", url: K.fiverr },
     K.whatsapp && { icon: "whatsapp", name: "WhatsApp", sub: "Chat with me directly", url: `https://wa.me/${K.whatsapp.replace(/\D/g, "")}` },
     K.email && { icon: "mail", name: "Email", sub: K.email, url: `mailto:${K.email}` },
     K.website && { icon: "globe", name: "Links", sub: K.website.replace(/^https?:\/\//, ""), url: K.website },

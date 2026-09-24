@@ -45,14 +45,25 @@ Your repository `Asjad150/Asjad150.github.io` is already set up as a GitHub Page
 
 On this laptop the GitHub CLI is signed in as **asjad-devomech**, which can't push to `Asjad150/...`. Pick one of these fixes:
 
-**Option A: add the Asjad150 account to the GitHub CLI (recommended)**
+**Option A: a separate Asjad150 login for this project only (recommended; already set up)**
+
+Your work login in `~/.config/gh` stays untouched. The Asjad150 login lives in `~/.config/gh-asjad150`, and only this repo uses it:
+- `.git/config` in this repo has a credential helper that reads from `~/.config/gh-asjad150`, so `git push` here goes out as Asjad150 and every other repo keeps using asjad-devomech.
+- `.vscode/settings.json` (git-ignored) sets `GH_CONFIG_DIR` for new terminals in this workspace, so `gh` commands there also use Asjad150.
+
+Sign in once. Make sure the browser is signed in to github.com as **Asjad150**, then run:
 ```bash
-gh auth login                 # choose GitHub.com → HTTPS → "Login with a web browser", sign in as Asjad150
-gh auth switch --user Asjad150   # only needed if both accounts are logged in
-gh auth setup-git             # lets git use the gh login for pushes
-gh auth status                # the active account should be Asjad150
+GH_CONFIG_DIR=~/.config/gh-asjad150 gh auth login --hostname github.com --web --scopes user
+# If asked for a protocol, choose HTTPS. If asked to authenticate Git, choose Yes.
+GH_CONFIG_DIR=~/.config/gh-asjad150 gh auth status   # → Asjad150
+gh auth status                                       # → still asjad-devomech
 ```
-To switch back for work later: `gh auth switch --user asjad-devomech`.
+
+If you ever re-create this folder, set the helper up again:
+```bash
+git config --local --add credential.https://github.com.helper ""
+git config --local --add credential.https://github.com.helper '!GH_CONFIG_DIR=$HOME/.config/gh-asjad150 /usr/bin/gh auth git-credential'
+```
 
 **Option B: add your work account as a collaborator**
 Sign in to github.com as **Asjad150** → repo **Asjad150.github.io** → *Settings → Collaborators → Add people* → `asjad-devomech` → accept the invite from the work account. After that, pushing from this laptop works without changing accounts.

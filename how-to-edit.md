@@ -134,6 +134,7 @@ contact: {
   whatsapp: "+923341541899",   // set to "" to hide the WhatsApp card
   linkedin: "https://www.linkedin.com/in/asjad-iftikhar-ai1/",
   github: "https://github.com/Asjad150",
+  fiverr: "https://www.fiverr.com/asjadiftikhar75",   // "" to hide
   website: "https://bio.link/asjadiftikhar",   // "" to hide
 },
 ```
