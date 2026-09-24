@@ -1,0 +1,22 @@
+# Optional: upload next to index.html on Hostinger (Apache/LiteSpeed).
+# Enables compression + caching and makes sure .js modules get the right MIME type.
+AddType application/javascript .js
+AddType image/svg+xml .svg
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+</IfModule>
+
+# Always fetch fresh content edits
+<FilesMatch "content\.js$">
+  Header set Cache-Control "no-cache"
+</FilesMatch>

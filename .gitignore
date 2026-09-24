@@ -1,0 +1,11 @@
+# Private documents — never publish these (the CV contains passport/DOB/address)
+*.pdf
+private/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
+*.zip
